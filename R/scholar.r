@@ -32,7 +32,7 @@ utils::globalVariables(c("name"))
 ##' @importFrom dplyr "%>%"
 get_profile <- function(id) {
 
-  url_template <- "http://scholar.google.com/citations?hl=en&user=%s"
+  url_template <- "https://scholar.google.com/citations?hl=en&user=%s"
   url <- compose_url(id, url_template)
 
   ## Generate a list of all the tables identified by the scholar ID
@@ -87,7 +87,7 @@ get_profile <- function(id) {
 ##' @importFrom dplyr "%>%"
 get_citation_history <- function(id) {
 
-    url_template <- "http://scholar.google.com/citations?hl=en&user=%s&pagesize=100&view_op=list_works"
+    url_template <- "https://scholar.google.com/citations?hl=en&user=%s&pagesize=100&view_op=list_works"
     url <- compose_url(id, url_template)
 
     ## A better way would actually be to read out the plot of citations

@@ -66,11 +66,11 @@ get_publications <- function(id, cstart = 0, cstop = Inf, pagesize=100, flush=FA
         stopifnot(sortby == "citation" | sortby == "year")
 
         if(sortby == "citation"){
-          url_template <- "http://scholar.google.com/citations?hl=en&user=%s&cstart=%d&pagesize=%d"
+          url_template <- "https://scholar.google.com/citations?hl=en&user=%s&cstart=%d&pagesize=%d"
         }
 
         if(sortby == "year"){
-          url_template <- "http://scholar.google.com/citations?hl=en&user=%s&cstart=%d&pagesize=%d&sortby=pubdate"
+          url_template <- "https://scholar.google.com/citations?hl=en&user=%s&cstart=%d&pagesize=%d&sortby=pubdate"
         }
 
         url <- sprintf(url_template, id, cstart, pagesize)

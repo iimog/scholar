@@ -90,7 +90,7 @@ plot_coauthors <- function(network, size_labels = 5) {
 # Extract the coauthors of an id and
 # only return the names of the author and coauthors
 list_coauthors <- function(id, n_coauthors) {
-    url_template <- "http://scholar.google.com/citations?hl=en&user=%s"
+    url_template <- "https://scholar.google.com/citations?hl=en&user=%s"
     url <- compose_url(id, url_template)
     
     if (id == "" | is.na(id)) {

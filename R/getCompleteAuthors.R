@@ -12,7 +12,7 @@
 get_complete_authors = function(id, pubid)
 {
   auths = ""
-  url_template = "http://scholar.google.com/citations?view_op=view_citation&citation_for_view=%s:%s"
+  url_template = "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=%s:%s"
   url = sprintf(url_template, id, pubid)
   
   url1<- get_scholar_resp(url) %>%
